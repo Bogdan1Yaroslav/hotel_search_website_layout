@@ -1,0 +1,1364 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+@font-face  {
+  font-family: "Muller";
+  src: local("Muller-Regular"),
+  url("../fonts/MullerRegular.woff2") format("woff2"),
+  url("../fonts/MullerRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face  {
+  font-family: "Muller";
+  src: local("Muller-Light"),
+  url("../fonts/MullerLight.woff2") format("woff2"),
+  url("../fonts/MullerLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face  {
+  font-family: "Muller";
+  src: local("Muller-Bold"),
+  url("../fonts/MullerBold.woff2") format("woff2"),
+  url("../fonts/MullerBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+body {
+  min-width: 1920px;
+  font-family: "Muller", sans-serif;
+  background-color: #F1F1F1;
+}
+
+.container {
+  width: 1169px;
+  margin: 0 auto;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+
+
+.flex {
+  display: flex;
+}
+
+
+:root {
+  --color-gray: #666666;
+  --color-light-gray: #999999;
+  --color-bronze: #CC9933;
+  --color-dark-bronze: #A47312;
+  --color-light-bronze:#FFCC66;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* Header */
+
+.header {
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
+
+.header-top {
+  flex-flow: row wrap;
+  margin-bottom: 30px;
+}
+
+/* Логотип */
+.logo-container {
+  margin: 0;
+  margin-right: 40px;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* Телефон */
+.contacts-link {
+  align-self: center;
+  color: var(--color-gray);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  transition: color 0.3s ease;
+  flex: 1;
+  margin-right: 550px;
+}
+
+.contacts-link:focus {
+  color: var(--color-bronze);
+  outline: 1px solid var(--color-bronze);
+}
+
+.contacts-link:hover {
+  color: var(--color-bronze);
+}
+
+.contacts-link:active {
+  color: var(--color-dark-bronze);
+  outline: none;
+}
+
+/* Личный кабинет */
+.personal-account {
+  align-self: center;
+  color: var(--color-bronze);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  transition: color 0.3s ease;
+}
+
+.personal-account-icon {
+  fill: var(--color-bronze);
+  margin-right: 3px;
+  transition: fill 0.3s ease;
+}
+
+.personal-account:focus {
+  color: var(--color-bronze);
+  outline: 1px solid var(--color-bronze);
+}
+
+.personal-account:hover {
+  color: #E9C479;
+}
+
+.personal-account:hover .personal-account-icon {
+  fill: #E9C479;
+}
+
+.personal-account:active {
+  color: var(--color-dark-bronze);
+  outline: none;
+}
+
+.personal-account:active .personal-account-icon {
+  fill: var(--color-bronze);
+}
+
+.header-bottom {
+  background-color: var(--color-white);
+  border-radius: 15px;
+}
+
+.header-nav {
+  padding: 14px 45px;
+  width: 100%;
+}
+
+.header-list {
+  align-items: center;
+  border-right: solid 1px #E1E1E1;
+  margin-right: 57px;
+}
+
+.header-list-item {
+  white-space: nowrap;
+}
+
+.header-list-item:not(:last-child) {
+  margin-right: 45px;
+}
+
+.header-list-item-button:not(:last-child) {
+  padding: 14px 45px;
+
+}
+
+.header-list-item-button:not(:last-child) {
+  margin-right: 1px;
+  margin-left: auto;
+}
+
+.header-list-item-button:nth-child(2n) {
+  padding-right: 45px;
+}
+
+.header-list-item:nth-child(6n) {
+  margin-right: 57px;
+}
+
+.header-in-link {
+  color: var(--color-gray);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  transition: color 0.3s ease;
+}
+
+.header-in-link:focus {
+  color: var(--color-bronze);
+  outline: 1px solid var(--color-bronze);
+}
+
+.header-in-link:hover {
+  color: var(--color-bronze);
+}
+
+.header-in-link:active {
+  color: var(--color-dark-bronze);
+  outline: none;
+}
+
+.header-nav-btn {
+  position: relative;
+  border-radius: 10px;
+  color: var(--color-bronze);
+  background-color: var(--color-white);
+  border: solid 1px var(--color-bronze);
+  padding: 13px 20px;
+  height: 42px;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.header-nav-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.header-nav-btn:focus {
+  opacity: 1;
+  color: var(--color-white);
+  background-color: var(--color-bronze);
+  outline-offset: 2px;
+  outline: 1px solid var(--color-bronze);
+}
+
+.header-nav-btn:hover {
+  background-color: var(--color-bronze);
+  color: var(--color-white);
+}
+
+.header-nav-btn:active {
+  background-color: var(--color-dark-bronze);
+  border-color: var(--color-dark-bronze);
+  color: var(--color-white);
+}
+
+.header-nav-btn:active, .header-nav-btn:focus {
+  outline: none;
+}
+
+.header-nav-btn:active::after {
+  opacity: 0;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+/* Main */
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+/* Section Специальные предложения */
+
+.special-item-img-1 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url("/img/special-offers-1.png");
+}
+
+.special-item-img-2 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url("/img/special-offers-2.png");
+}
+
+.special-item-img-3 {
+  background-image: url("/img/special-offers-3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*--------------------------------------------------------- */
+
+.special-offers-section {
+  margin-bottom: 70px;
+}
+
+.special-offers-title {
+  margin: 0;
+  padding-left: 40px;
+  padding-bottom: 20px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  color: #333333;
+}
+
+.special-offers-content {
+  display: flex;
+  margin-bottom: 70px;
+}
+
+.special-block {
+  display: flex;
+  flex-direction: column;
+  width: calc((100% - 30px) / 2);
+}
+
+.special-block:not(:last-child) {
+  margin-right: 30px;
+}
+
+.special-offers-item {
+  flex: 1;
+  margin-bottom: 30px;
+  padding: 40px 234px 40px 40px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.special-offers-item:nth-child(3n) {
+  padding: 211px 234px 40px 40px;
+}
+
+.special-item-a:hover .special-item-a-decoration {
+  transform: translateX(5px);
+}
+
+.special-item-a:active {
+  color: var(--color-white);
+}
+
+svg {
+  transition: transform .2s ease-in-out;
+}
+
+.special-item-a:focus-visible  {
+  outline: 0;
+}
+
+.special-item-a:focus-visible::before {
+  opacity: 1;
+}
+
+.special-item-a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  outline: 2px solid orange;
+  outline-offset: 10px;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+.special-item-a {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--color-light-bronze);
+  padding-right: 15px;
+}
+
+.special-item-a-decoration {
+  right: -2px;
+  stroke: var(--color-light-bronze);
+  transition: transform .2s ease-in-out;
+}
+
+.special-offers-item-content, .special-item-right-content {
+  width: 299px;
+}
+
+.special-item-right-content {
+  min-height: 281px;
+}
+
+.special-offers-h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  color: var(--color-white);
+  margin-bottom: 15px;
+}
+
+.special-item-p-first {
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--color-white);
+  opacity: 0.8;
+  margin-bottom: 47px;
+}
+
+.special-offers-right-h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
+  color: var(--color-white);
+  margin-bottom: 15px;
+}
+
+.special-item-right-p-first {
+  margin: 0;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--color-white);
+  opacity: 0.8;
+  margin-bottom: 47px;
+}
+
+.item-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.special--item:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+/* Section О нас */
+
+.about-us {
+  margin-bottom: 70px;
+}
+
+.about-us-content {
+  width: 888px;
+  min-height: 180px;
+}
+
+.about-us-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  color: var(--color-black);
+}
+
+.about-us-title {
+  margin: 0;
+  padding-left: 40px;
+  padding-bottom: 20px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  color: #333333;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+/* Section Услуги */
+
+/* Background изображения на карточки */
+.services-background-img-1 {
+  background-image: url("/img/services-1.jpg");
+  background-repeat: no-repeat;
+}
+
+.services-background-img-2 {
+  background-image: url("/img/services-2.jpg");
+  background-repeat: no-repeat;
+}
+
+.services-background-img-3 {
+  background-image: url("/img/services-3.jpg");
+  background-repeat: no-repeat;
+}
+
+.services-background-img-4 {
+  background-image: url("/img/services-4.jpg");
+  background-repeat: no-repeat;
+}
+/* --------------------------------------------------- */
+
+.services {
+  margin-bottom: 70px;
+  min-height: 743px;
+}
+
+.services-title {
+  margin: 0;
+  padding-left: 40px;
+  padding-bottom: 20px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  color: #333333;
+}
+
+.service-item-title {
+  margin: 0;
+}
+
+.service-item-link {
+  margin: 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 200%;
+  color: var(--color-bronze);
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.service-item-link-decoration {
+  position: absolute;
+  bottom: 0px;
+  right: -15px;
+  stroke: var(--color-bronze);
+  transition: right 0.3s ease, stroke 0.3s ease;
+}
+
+.service-item-link:focus .service-item-link-decoration {
+  right: -15px;
+}
+
+.service-item-link:hover {
+  color: #E9C479;
+}
+
+.service-item-link:hover .service-item-link-decoration {
+  right: -30px;
+  stroke: #E9C479;
+}
+
+.personal-account:focus {
+  color: var(--color-bronze);
+  outline: 1px solid var(--color-bronze);
+}
+
+.personal-account:hover .personal-account-icon {
+  fill: #E9C479;
+}
+
+.service-item-link:active {
+  color: var(--color-dark-bronze);
+  outline: none;
+}
+
+.personal-account:active .personal-account-icon {
+  stroke: var(--color-bronze);
+  right: -15px;
+}
+
+.services-title {
+  margin: 0;
+}
+
+.service-description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  color: var(--color-black);
+}
+
+.services-list {
+  flex-flow: row wrap;
+}
+
+.services-item {
+  max-width: 573px;
+  min-height: 330px;
+  border-radius: 15px;
+  background-color: var(--color-white);
+  padding: 191px 126px 50px 45px;
+}
+
+ .services-item{
+  margin-right: 23px;
+  margin-bottom: 23px;
+}
+
+.services-item:nth-child(2n) {
+  margin-right: 0;
+}
+
+.services-item:nth-child(n+3) {
+  margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+/* Section Преимущества */
+
+/* Background изображения на карточки */
+.advantages-background-img-1:before {
+  background-image: url("/img/advantages-1.svg");
+}
+
+.advantages-background-img-2:before {
+  background-image: url("/img/advantages-2.svg");
+}
+
+.advantages-background-img-3:before {
+  background-image: url("/img/advantages-3.svg");
+}
+
+.advantages-background-img-4:before {
+  background-image: url("/img/advantages-4.svg");
+}
+
+.advantages-background-img-5:before {
+  background-image: url("/img/advantages-5.svg");
+}
+
+.advantages-background-img-6:before {
+  background-image: url("/img/advantages-6.svg");
+}
+
+.advantages-background-img-7:before {
+  background-image: url("/img/advantages-7.svg");
+}
+
+.advantages-background-img-8:before {
+  background-image: url("/img/advantages-8.svg");
+}
+
+/* --------------------------------------------------- */
+
+.advantages {
+  margin-bottom: 70px;
+}
+
+.advantages-title {
+  margin: 0;
+  padding-left: 40px;
+  padding-bottom: 20px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  color: #333333;
+}
+
+.advantages-items-list {
+  flex-flow: row wrap;
+}
+
+.advantages-item {
+  position: relative;
+  max-width: 275px;
+  min-height: 275px;
+  padding: 116px 42px 41px 45px;
+  margin-right: 23px;
+  margin-bottom: 23px;
+  background-color: var(--color-white);
+  border-radius: 15px;
+}
+
+.advantages-item:before {
+  content: "";
+  position: absolute;
+  width: 67px;
+  height: 66px;
+  top: 40px;
+  left: 45px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+/* Обнуляю отступ снизу у 5-8 карточек */
+/* .advantages-item:nth-child(n+5) {
+  margin-bottom: 0;
+} */
+
+
+/* Обнуляю отступ справа у 4 карточки */
+.advantages-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.advantages-item-description {
+  width: 188px;
+  min-height: 118px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  color: var(--color-black);
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+/* Section Размещения */
+
+.accommodation {
+  margin-bottom: 70px;
+}
+
+.accommodation-title {
+  margin: 0;
+  padding-left: 40px;
+  padding-bottom: 20px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  color: #333333;
+}
+
+.accommodation-list {
+  flex-flow: row wrap;
+}
+
+.accommodation-item {
+  width: 374px;
+  min-height: 440px;
+  margin-right: 23px;
+  margin-bottom: 23px;
+  background-color: var(--color-white);
+  border-radius: 15px;
+  position: relative;
+}
+
+.accommodation-last-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  outline-offset: 10px;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+.accommodation-last-item:focus-visible {
+  outline: 0;
+}
+.accommodation-last-item:focus-visible:before {
+  opacity: 1;
+}
+
+.accommodation-last-item:hover svg {
+  transform: translateX(5px);
+}
+
+svg {
+  transition: transform .2s ease-in-out;
+}
+
+.accommodation-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.accommodation-item:nth-child(n+7) {
+  margin-bottom: 0;
+}
+
+.accommodation-image {
+  margin: 0;
+}
+
+.general-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--color-light-gray);
+}
+
+.general-text:nth-child(2n) {
+  margin-right: 43px;
+}
+
+.bold-text {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--color-black);
+}
+
+.hotel-name {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--color-black);
+  margin-bottom: 16px;
+}
+
+.location-name {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--color-light-gray);
+  margin-bottom: 20px;
+}
+
+.available-rooms-btn {
+  padding: 13px 20px;
+  color: var(--color-bronze);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-bronze);
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.available-rooms-btn:focus {
+  opacity: 1;
+  color: var(--color-white);
+  background-color: var(--color-bronze);
+  outline: 1px solid var(--color-bronze);
+  outline-offset: 2px;
+}
+
+.available-rooms-btn:hover {
+  color: var(--color-white);
+  background-color: var(--color-bronze);
+}
+
+.available-rooms-btn:active {
+  color: var(--color-white);
+  background-color: var(--color-dark-bronze);
+  border-color: var(--color-dark-bronze);
+}
+
+.available-rooms-btn:active, .available-rooms-btn:focus {
+  outline: none;
+}
+
+.available-rooms-btn:active::after {
+  opacity: 0;
+}
+
+.price-and-rating {
+  min-width: 284px;
+  padding: 36px 45px 40px 45px;
+}
+
+.accommodation-info {
+  display: inline-block;
+  margin-right: 43px;
+}
+
+.rating {
+  display: inline-block;
+}
+
+.cls {
+  margin-bottom: 16px;
+}
+
+.accommodation-last-item {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 200%;
+  color: var(--color-white);
+  display: inline-block;
+  padding-right: 17px;
+}
+
+.accommodation-last-item-background-img {
+  background-image: url("/img/accommodation-last-item-background-img.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.accommodation-last-item-img {
+  background-image: url("/img/accommodation-9.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.accommodation-last-card {
+  flex-direction: column-reverse;
+  flex-grow: 1;
+  align-items: center;
+  padding-bottom: 27px;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+/* Section Хочу Тур */
+
+.tour-booking {
+  margin-bottom: 70px;
+}
+
+.tour-booking-content {
+  padding: 38px 45px 71px 45px;
+  background: #E9E9E9;
+  border-radius: 15px;
+}
+
+.tour-booking-title {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  color: var(--color-black);
+}
+
+.tour-booking-list {
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 28px;
+  background-color: var(--color-white);
+  border-radius: 15px;
+}
+
+.tour-booking-item {
+  margin-right: 20px;
+  align-items: center;
+}
+
+.tour-booking-item:not(:last-child) {
+  border-right: 1px solid #E1E1E1;
+}
+
+.tour-booking-item:last-child {
+  margin: 0;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.tour-booking-item:nth-child(5n) {
+  margin-right: 30px;
+}
+
+.tour-booking-btn {
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 10px;
+  color: var(--color-bronze);
+  background-color: var(--color-white);
+  border: solid 1px var(--color-bronze);
+  padding: 13px 20px;
+  height: 42px;
+  white-space: nowrap;
+  width: 108px;
+  line-height: 16px;
+  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.tour-booking-btn:focus {
+  opacity: 1;
+  color: var(--color-white);
+  background-color: var(--color-bronze);
+  outline: 1px solid var(--color-bronze);
+  outline-offset: 2px;
+}
+
+.tour-booking-btn:hover {
+  color: var(--color-white);
+  background-color: var(--color-bronze);
+}
+
+.tour-booking-btn:active {
+  color: var(--color-white);
+  background-color: var(--color-dark-bronze);
+  border-color: var(--color-dark-bronze);
+}
+
+.tour-booking-btn:active, .tour-booking-btn:focus {
+  outline: none;
+}
+
+.tour-booking-btn:active::after {
+  opacity: 0;
+}
+
+.tour-booking-p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: var(--color-black);
+  margin-bottom: 15px;
+}
+
+.tour-booking-item-city {
+  width: 169px;
+  padding-right: 20px;
+}
+
+.tour-booking-item-country {
+  width: 190px;
+}
+
+.tour-booking-item-date {
+  width: 142px;
+}
+
+.tour-booking-item-nights {
+  width: 142px;
+}
+
+.tour-booking-item-tourists {
+  width: 142px;
+}
+
+SELECT {
+  background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+  background-position: calc(100% - 0.75rem) center !important;
+  -moz-appearance:none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  padding-right: 2rem !important;
+}
+
+.tour-booking-date {
+  border: none;
+  margin: 0;
+  width: 121px;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  margin: 0;
+}
+
+.form-select {
+  border: none;
+}
+
+.form-input {
+  border: none;
+  border-bottom: 1px solid #E1E1E1;
+  width: inherit;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+/* Section Контакты */
+
+.contacts {
+  margin-bottom: 20px;
+}
+
+.contacts-title {
+  margin: 0;
+  padding-left: 40px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  color: #333333;
+  margin-bottom: 26px;
+}
+
+.contacts-content {
+  max-height: 684px;
+  min-width: 375px;
+}
+
+.contacts-list {
+  flex-flow: column wrap;
+}
+
+.contacts-h3 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--color-black);
+  flex: 1;
+}
+
+.contacts-container {
+  padding: 44px;
+  background-color: var(--color-white);
+  border-radius: 15px;
+}
+
+.contacts-info {
+  width: 375px;
+  margin-right: 20px;
+}
+
+.contacts-img {
+  background-image: url("/img/contacts-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contacts-item {
+  width: 375px;
+  min-height: 72px;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 25px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #C4C4C4;
+}
+
+.contacts-item:nth-child(4n) {
+  margin-bottom: 45px;
+}
+
+.build-route-btn {
+  font-weight: 700;
+  font-size: 16px;
+  padding: 27px 29px;
+  line-height: 16px;
+  color: var(--color-bronze);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-bronze);
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.build-route-link {
+  transition: color 0.3s ease-in-out;
+}
+
+.build-route-btn:focus {
+  opacity: 1;
+  color: var(--color-white);
+  background-color: var(--color-bronze);
+  outline: 1px solid var(--color-bronze);
+  outline-offset: 2px;
+}
+
+.build-route-btn:hover {
+  color: var(--color-white);
+  background-color: var(--color-bronze);
+}
+
+.build-route-btn:active {
+  color: var(--color-white);
+  background-color: var(--color-dark-bronze);
+  border-color: var(--color-dark-bronze);
+}
+
+.build-route-btn:active, .build-route-btn:focus {
+  outline: none;
+}
+
+.build-route-btn:active::after {
+  opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper {
+  width: 229px;
+}
+
+
+.wrapper-phones {
+  width: 146px;
+}
+
+
+.text-for-contacts-and-schedule {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-black);
+}
+
+.contacts-img {
+  width: 653px;
+  margin-left: auto;
+}
+
+.telephone-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-bronze);
+}
+
+.contacts-item-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-bronze);
+  transition: color 0.3s ease;
+}
+
+.contacts-item-link:focus {
+  color: var(--color-bronze);
+  outline: 1px solid var(--color-bronze);
+
+}
+
+.contacts-item-link:hover {
+  color: #E9C479;
+}
+
+
+.contacts-item-link:active {
+  color: var(--color-dark-bronze);
+  outline: none;
+}
+
+
+.contacts-item-p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-light-gray);
+
+}
+
+.text-for-contacts-and-schedule {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-black);
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+/* Footer */
+
+
+.footer {
+  margin-bottom: 20px;
+}
+
+
+.footer-container {
+  background: #333333;
+  border-radius: 15px;
+  /* outline: 1px solid red; */
+  padding: 44px 51px 66px 52px;
+}
+
+
+
+
+.user-agreement {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-bronze);
+}
+
+
+
+
+.footer-p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 190%;
+  color: var(--color-white);
+}
+
+.footer-p:last-child {
+  margin-bottom: 49px;
+}
+
+
+
+
+
+.footer-div-1 {
+  width: 372px;
+  margin-right: 102px;
+
+}
+
+.footer-div-2 {
+  width: 358px;
+  flex: 1;
+}
+
+.footer-telephones {
+  margin-bottom: 15px;
+}
+
+.footer-telephone-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-bronze);
+}
+
+
+.footer-mail-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-bronze);
+}
+
+.social-network-link:not(:last-child){
+  margin-bottom: 20px;
+}
+
+.social-network-icon {
+  fill: var(--color-light-gray);
+  transition: fill 0.3s ease;
+}
+
+.social-network-icon:focus {
+  fill: var(--color-bronze);
+  outline: none;
+}
+
+.social-network-icon:hover {
+  fill: var(--color-bronze);
+}
+
+.social-network-icon:active {
+  fill: var(--color-dark-bronze);
+}
+
+.footer-background-img {
+  background-image: url("/img/footer-logo.png");
+  background-repeat: no-repeat;
+  background-position: bottom  right 150px;
+}
