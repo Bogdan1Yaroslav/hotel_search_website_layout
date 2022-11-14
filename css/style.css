@@ -112,7 +112,7 @@ body {
   margin-bottom: 30px;
 }
 
-/* Логотип */
+/* logo */
 .logo-container {
   margin: 0;
   margin-right: 40px;
@@ -120,7 +120,7 @@ body {
   flex-direction: row;
 }
 
-/* Телефон */
+/* tel */
 .contacts-link {
   align-self: center;
   color: var(--color-gray);
@@ -146,7 +146,7 @@ body {
   outline: none;
 }
 
-/* Личный кабинет */
+/* login */
 .personal-account {
   align-self: center;
   color: var(--color-bronze);
@@ -295,7 +295,7 @@ body {
 /* Main */
 /* ---------------------------------------------------------------------------------------------------------------------------- */
 
-/* Section Специальные предложения */
+/* Section Special offers */
 
 .special-item-img-1 {
   background-repeat: no-repeat;
@@ -463,7 +463,7 @@ svg {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------- */
-/* Section О нас */
+/* Section About us */
 
 .about-us {
   margin-bottom: 70px;
@@ -492,9 +492,9 @@ svg {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------- */
-/* Section Услуги */
+/* Section Services */
 
-/* Background изображения на карточки */
+/* Background images */
 .services-background-img-1 {
   background-image: url("/img/services-1.jpg");
   background-repeat: no-repeat;
@@ -623,9 +623,9 @@ svg {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------- */
-/* Section Преимущества */
+/* Section Advantages */
 
-/* Background изображения на карточки */
+/* Background images */
 .advantages-background-img-1:before {
   background-image: url("/img/advantages-1.svg");
 }
@@ -701,13 +701,6 @@ svg {
   background-position: center;
 }
 
-/* Обнуляю отступ снизу у 5-8 карточек */
-/* .advantages-item:nth-child(n+5) {
-  margin-bottom: 0;
-} */
-
-
-/* Обнуляю отступ справа у 4 карточки */
 .advantages-item:nth-child(4n) {
   margin-right: 0;
 }
@@ -723,7 +716,7 @@ svg {
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------- */
-/* Section Размещения */
+/* Section Accommodation */
 
 .accommodation {
   margin-bottom: 70px;
@@ -910,7 +903,7 @@ svg {
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------- */
-/* Section Хочу Тур */
+/* Section Book a tour */
 
 .tour-booking {
   margin-bottom: 70px;
@@ -1058,7 +1051,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------- */
-/* Section Контакты */
+/* Section Contacts */
 
 .contacts {
   margin-bottom: 20px;
@@ -1167,28 +1160,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .wrapper {
   width: 229px;
 }
@@ -1278,16 +1249,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 
-
-
 .user-agreement {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   color: var(--color-bronze);
 }
-
-
 
 
 .footer-p {
@@ -1300,8 +1267,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .footer-p:last-child {
   margin-bottom: 49px;
 }
-
-
 
 
 
